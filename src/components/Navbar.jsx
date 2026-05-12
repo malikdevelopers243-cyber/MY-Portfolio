@@ -84,8 +84,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `text-lg font-semibold transition-all duration-300 w-full text-center py-3 px-4 rounded-lg ${
                     isActive
-                      ? 'text-white bg-red-700 scale-105 shadow-lg'
-                      : 'text-white hover:bg-red-700'
+                      ? 'text-black bg-white scale-105 shadow-lg'
+                      : 'text-black hover:bg-white'
                   }`
                 }
                 style={{
