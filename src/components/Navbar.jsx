@@ -62,7 +62,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-red-600 z-40 transition-transform duration-300 ease-in-out ${
+      <div className={`md:hidden fixed top-0 right-0 w-1/2 h-full bg-red-600 z-40 transition-transform duration-300 ease-in-out shadow-2xl ${
         open ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex flex-col h-full">
@@ -75,24 +75,24 @@ export default function Navbar() {
               <FontAwesomeIcon icon={faTimes} />
             </button>
           </div>
-          <div className="flex-1 flex flex-col justify-center items-center gap-6 px-6">
+          <div className="flex-1 flex flex-col justify-center items-center gap-4 px-4">
             {links.map((link, index) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `text-xl font-semibold transition-all duration-300 w-full text-center ${
+                  `text-lg font-semibold transition-all duration-300 w-full text-center py-3 px-4 rounded-lg ${
                     isActive
-                      ? 'text-black bg-white py-4 rounded-xl scale-105 shadow-lg'
-                      : 'text-black hover:bg-white py-4 rounded-xl'
+                      ? 'text-white bg-red-700 scale-105 shadow-lg'
+                      : 'text-white hover:bg-red-700'
                   }`
                 }
                 style={{
                   animationDelay: `${index * 0.08}s`,
-                  animation: open ? 'slideInLeft 0.5s ease forwards' : 'none',
+                  animation: open ? 'slideInRight 0.5s ease forwards' : 'none',
                   opacity: open ? 0 : 1,
-                  transform: open ? 'translateX(50px)' : 'translateX(0)',
+                  transform: open ? 'translateX(-50px)' : 'translateX(0)',
                 }}
               >
                 {link.label}
