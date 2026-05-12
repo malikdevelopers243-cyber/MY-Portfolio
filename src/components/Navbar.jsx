@@ -99,9 +99,9 @@ export default function Navbar() {
               </NavLink>
             ))}
           </div>
-          <div className="p-6 border-t border-[#00c896]/30">
-            <p className="text-black text-sm text-center font-[Inter]">© 2024 Asad Malik</p>
-          </div>
+          {/* <div className="p-6 border-t border-[#00c896]/30">
+            <p className="text-black text-sm text-center font-[Inter]">Asad Malik</p>
+          </div> */}
         </div>
       </div>
     </nav>
