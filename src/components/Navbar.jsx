@@ -1,10 +1,14 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
 
 const links = [
   { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
   { to: '/projects', label: 'Projects' },
   { to: '/resume', label: 'Resume' },
+  { to: '/contact', label: 'Contact' },
 ]
 
 export default function Navbar() {
@@ -51,29 +55,50 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-white text-2xl p-2 rounded-lg hover:bg-[#1f2937] transition-colors"
           onClick={() => setOpen(!open)}
         >
-          <i className={`fas ${open ? 'fa-times' : 'fa-bars'}`}></i>
+          <FontAwesomeIcon icon={open ? faTimes : faBars} />
         </button>
       </div>
 
-      {open && (
-        <div className="md:hidden bg-[#0d1117] border-t border-[#1f2937] px-6 py-4 flex flex-col gap-4">
-          {links.map(link => (
-            <NavLink
-              key={link.to}
-              to={link.to}
+      <div className={`md:hidden fixed inset-0 bg-[#0d1117] z-40 transition-transform duration-300 ease-in-out ${
+        open ? 'translate-x-0' : 'translate-x-full'
+      }`}>
+        <div className="flex flex-col h-full">
+          <div className="flex justify-end p-6">
+            <button
+              className="text-white text-2xl p-2 rounded-lg hover:bg-[#1f2937] transition-colors"
               onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                isActive ? 'text-[#00c896] font-medium text-sm' : 'text-[#8b949e] text-sm hover:text-white'
-              }
             >
-              {link.label}
-            </NavLink>
-          ))}
+              <FontAwesomeIcon icon={faTimes} />
+            </button>
+          </div>
+          <div className="flex-1 flex flex-col justify-center items-center gap-8 px-6">
+            {links.map((link, index) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                onClick={() => setOpen(false)}
+                className={({ isActive }) =>
+                  `text-xl font-medium transition-all duration-300 ${
+                    isActive
+                      ? 'text-[#00c896] scale-110'
+                      : 'text-[#8b949e] hover:text-white hover:scale-105'
+                  }`
+                }
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                  animation: open ? 'fadeInUp 0.6s ease forwards' : 'none',
+                  opacity: open ? 0 : 1,
+                }}
+              >
+                {link.label}
+              </NavLink>
+            ))}
+          </div>
         </div>
-      )}
+      </div>
     </nav>
   )
 }
