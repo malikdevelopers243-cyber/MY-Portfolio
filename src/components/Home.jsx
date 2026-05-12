@@ -13,7 +13,7 @@ export default function Home() {
 
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10 pt-20">
         <div className="space-y-6">
-          <div className="animate-fadeInUp flex justify-center md:justify-start" style={{animationDelay:'0.1s'}}>
+          <div className="animate-fadeInUp flex justify-center md:justify-start mt-8" style={{animationDelay:'0.1s'}}>
             <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#00c896]/10 border border-[#00c896]/30 text-[#00c896] rounded-full text-sm">
               Hello !
             </span>
