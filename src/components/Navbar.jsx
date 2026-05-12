@@ -62,13 +62,13 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className={`md:hidden fixed inset-0 bg-[#0d1117] z-40 transition-transform duration-300 ease-in-out ${
+      <div className={`md:hidden fixed inset-0 bg-red-600 z-40 transition-transform duration-300 ease-in-out ${
         open ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex flex-col h-full">
           <div className="flex justify-end p-6">
             <button
-              className="text-white text-2xl p-2 rounded-lg hover:bg-[#1f2937] transition-colors"
+              className="text-white text-2xl p-2 rounded-lg hover:bg-red-700 transition-colors"
               onClick={() => setOpen(false)}
             >
               <FontAwesomeIcon icon={faTimes} />
@@ -83,8 +83,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `text-xl font-medium transition-all duration-300 ${
                     isActive
-                      ? 'text-[#00c896] scale-110'
-                      : 'text-[#8b949e] hover:text-white hover:scale-105'
+                      ? 'text-white bg-red-700 px-6 py-3 rounded-lg scale-110'
+                      : 'text-white hover:bg-red-700 hover:scale-105 px-6 py-3 rounded-lg'
                   }`
                 }
                 style={{
