@@ -62,14 +62,14 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-gradient-to-br from-red-600 to-red-700 z-40 transition-transform duration-300 ease-in-out ${
+      <div className={`md:hidden fixed top-0 left-0 w-full h-full bg-red-600 z-40 transition-transform duration-300 ease-in-out ${
         open ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex flex-col h-full">
-          <div className="flex justify-between items-center p-6 border-b border-red-500">
+          <div className="flex justify-between items-center p-6 border-b border-red-700">
             <h2 className="text-white text-xl font-bold font-[Poppins]">Menu</h2>
             <button
-              className="text-white text-2xl p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300"
+              className="text-white text-2xl p-3 rounded-full hover:bg-red-700 transition-all duration-300"
               onClick={() => setOpen(false)}
             >
               <FontAwesomeIcon icon={faTimes} />
@@ -84,8 +84,8 @@ export default function Navbar() {
                 className={({ isActive }) =>
                   `text-xl font-semibold transition-all duration-300 w-full text-center ${
                     isActive
-                      ? 'text-white bg-white/20 backdrop-blur-sm py-4 rounded-xl scale-105 shadow-lg'
-                      : 'text-white/90 hover:text-white hover:bg-white/10 hover:backdrop-blur-sm py-4 rounded-xl'
+                      ? 'text-black bg-white py-4 rounded-xl scale-105 shadow-lg'
+                      : 'text-black hover:bg-white py-4 rounded-xl'
                   }`
                 }
                 style={{
@@ -99,8 +99,8 @@ export default function Navbar() {
               </NavLink>
             ))}
           </div>
-          <div className="p-6 border-t border-red-500">
-            <p className="text-white/60 text-sm text-center font-[Inter]">© 2024 Asad Malik</p>
+          <div className="p-6 border-t border-red-700">
+            <p className="text-white/80 text-sm text-center font-[Inter]">© 2024 Asad Malik</p>
           </div>
         </div>
       </div>
