@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-2 h-8 bg-[#00c896] rounded-full"></div>
-          <h1 className="text-white text-xl font-bold font-[Poppins]">Welcome to my Portfolio</h1>
+          <h1 className="text-white text-xl font-bold font-[Poppins]">Your Dreams Into Websites</h1>
         </div>
 
         <div className="hidden md:flex items-center gap-3">
