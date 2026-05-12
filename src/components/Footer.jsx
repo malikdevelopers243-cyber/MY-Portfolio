@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-gray-600 text-sm font-[Inter]">
-            ......................
+            Started my Career from 2024
           </div>
 
           <div className="flex gap-11">

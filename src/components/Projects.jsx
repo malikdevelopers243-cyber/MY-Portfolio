@@ -11,71 +11,71 @@ const projects = [
     title: 'ShopEase',
     business: 'E-commerce Platform',
     tags: ['Retail', 'Web'],
-    image: '/projects/project2.svg',
+    image: '/shop.png',
     view: '#',
     case: '#',
   },
   {
-    title: 'Evently',
+    title: 'Festivo',
     business: 'Event Booking',
     tags: ['Events', 'UI'],
-    image: '/projects/project3.svg',
+    image: '/Festivo.png',
     view: '#',
     case: '#',
   },
   {
-    title: 'TravelMate',
+    title: 'Wanderly',
     business: 'Travel Planner',
     tags: ['Travel', 'Planning'],
-    image: '/projects/project4.svg',
+    image: '/Wanderly.png',
     view: '#',
     case: '#',
   },
   {
-    title: 'EduWave',
+    title: 'Pathways',
     business: 'eLearning Portal',
     tags: ['Education', 'Platform'],
-    image: '/projects/project5.svg',
+    image: '/Pathways.png',
     view: '#',
     case: '#',
   },
   {
-    title: 'FoodFlow',
+    title: 'FlavorPath',
     business: 'Food Delivery',
     tags: ['Food', 'Delivery'],
-    image: '/projects/project6.svg',
+    image: '/Flavorpath.png',
     view: '#',
     case: '#',
   },
   {
-    title: 'GreenHome',
+    title: 'EcoPath',
     business: 'Eco Services',
     tags: ['Sustainability', 'Service'],
-    image: '/projects/project7.svg',
+    image: '/Ecopath.png',
     view: '#',
     case: '#',
   },
   {
-    title: 'CryptoCube',
+    title: 'CryptoPath',
     business: 'Crypto Tracker',
     tags: ['Finance', 'Dashboard'],
-    image: '/projects/project8.svg',
+    image: '/Cryptopath.png ',
     view: '#',
     case: '#',
   },
   {
-    title: 'MediaHub',
+    title: 'OpenWave',
     business: 'Streaming Service',
     tags: ['Media', 'Streaming'],
-    image: '/projects/project9.svg',
+    image: '/Openwave.png',
     view: '#',
     case: '#',
   },
   {
-    title: 'BuildSpace',
+    title: 'BioStruct',
     business: 'Construction CRM',
     tags: ['Construction', 'B2B'],
-    image: '/projects/project10.svg',
+    image: '/Biostruct.png',
     view: '#',
     case: '#',
   },
@@ -100,11 +100,11 @@ export default function Projects({ previewCount = 0 }) {
               key={index}
               className="bg-[#161b22] rounded-2xl border border-[#1f2937] overflow-hidden hover:border-[#00c896]/40 hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-80 overflow-hidden flex items-center justify-center bg-[#1f2937]">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               </div>
 
